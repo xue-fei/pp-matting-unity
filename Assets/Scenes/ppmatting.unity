@@ -485,7 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modelPath: ppmattingv2_stdc1_human_384x480.onnx
   confThreshold: 0.65
-  inputTexture2D: {fileID: 2800000, guid: 821156773460bef4d8d54f224c439703, type: 3}
+  inputTexture2D: {fileID: 2800000, guid: a65f3334d66260d4eada97bce2073991, type: 3}
   image: {fileID: 1044014460}
   resultTexture: {fileID: 0}
 --- !u!1 &1044014458
@@ -524,7 +524,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044014460
 MonoBehaviour:
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: a65f3334d66260d4eada97bce2073991, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

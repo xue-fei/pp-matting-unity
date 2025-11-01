@@ -2,14 +2,16 @@ using Microsoft.ML.OnnxRuntime;
 using Microsoft.ML.OnnxRuntime.Tensors;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class ppmatting : MonoBehaviour
 {
     [Header("模型设置")]
-    public string modelPath = "ppmattingv2_stdc1_human_384x480.onnx";
+    public string modelPath = "ppmattingv2_stdc1_human_512x512.onnx";
     public float confThreshold = 0.65f;
 
     [Header("输入设置")]
@@ -19,8 +21,8 @@ public class ppmatting : MonoBehaviour
     public RawImage image;
 
     private InferenceSession session;
-    private int inputWidth = 480;
-    private int inputHeight = 384;
+    private int inputWidth = 512;
+    private int inputHeight = 512;
 
     // 输入输出节点名称
     private string inputName = "input";
@@ -36,7 +38,13 @@ public class ppmatting : MonoBehaviour
         // 如果设置了输入纹理，立即处理
         if (inputTexture2D != null)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             image.texture = ProcessInputTexture();
+            stopwatch.Stop();
+            long lastInferenceTime = stopwatch.ElapsedMilliseconds;
+            // 输出耗时信息
+            Debug.Log($"推理完成！总耗时: {lastInferenceTime}ms");
         }
     }
 
