@@ -1,0 +1,10 @@
+
+Library
+Logs
+Temp
+*.sln
+obj
+.vs
+Assets/onnxruntime-unity
+*.dwlt
+*.csproj
