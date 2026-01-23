@@ -61,8 +61,8 @@ public class ppmatting : MonoBehaviour
                 Debug.Log(ap);
             }
             var options = new SessionOptions();
-            //options.AppendExecutionProvider_CPU();
-            options.AppendExecutionProvider_CUDA();
+            options.AppendExecutionProvider_CPU();
+            //options.AppendExecutionProvider_CUDA();
             session = new InferenceSession(modelFullPath, options);
 
             // 获取输入形状
