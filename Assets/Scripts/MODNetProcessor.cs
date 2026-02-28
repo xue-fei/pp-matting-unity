@@ -55,6 +55,10 @@ public class MODNetProcessor : MonoBehaviour
             {
                 options.AppendExecutionProvider_CUDA();
             }
+            //else if(aps.Contains("DmlExecutionProvider"))
+            //{
+            //    options.AppendExecutionProvider_DML();
+            //}
             else
             {
                 options.AppendExecutionProvider_CPU();

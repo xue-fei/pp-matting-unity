@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "ai.onnxruntime": {
-      "version": "https://github.com/xue-fei/onnxruntime-unity.git",
+      "version": "https://github.com/xue-fei/onnxruntime-unity-directml.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "99b49409968ac0bbd9b75efda5a4d6769b87f778"
+      "hash": "59a710759b5727306e696348bce89e1c0171e4e3"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
@@ -15,7 +15,7 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.26",
+      "version": "2.0.27",
       "depth": 0,
       "source": "registry",
       "dependencies": {
